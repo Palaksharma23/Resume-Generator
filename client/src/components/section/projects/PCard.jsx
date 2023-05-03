@@ -8,7 +8,9 @@ export default function PCard({ Project }) {
 
   const deleteProject = () => {
     axios
-      .delete(`http://localhost:5000/project/delete/${Project._id}`)
+      .delete(
+        `https://resumegeneratorapp.onrender.com/project/delete/${Project._id}`
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

@@ -42,7 +42,6 @@
 #education textarea,
 #education input:focus,
 #education textarea:focus {
-  outline: none;
   border: 0px;
   color: inherit;
   background: inherit;

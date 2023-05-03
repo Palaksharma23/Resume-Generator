@@ -44,7 +44,7 @@ export default function Login(props) {
       User.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
     ) {
       axios
-        .post("http://localhost:5000/auth/login", User)
+        .post("https://resumegeneratorapp.onrender.com/auth/login", User)
         .then((res) => {
           setAlert(res.data.message);
           if (res.data.message === "Logged In Successfully") {

@@ -32,7 +32,7 @@ export default function ICard(props) {
 
   const addIntroduction = () => {
     axios
-      .post("http://localhost:5000/introduction/add", Intro)
+      .post("https://resumegeneratorapp.onrender.com/introduction/add", Intro)
       .then((res) => {
         Toast.fire({
           icon: "success",

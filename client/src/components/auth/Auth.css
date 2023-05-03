@@ -31,7 +31,6 @@ figure {
 a:active,
 a:focus {
   text-decoration: none;
-  outline: 0;
 }
 
 .container {
@@ -106,7 +105,7 @@ a:focus {
   overflow: hidden;
 }
 
-.form-text{
+.form-text {
   color: rgb(0, 0, 0);
   font-size: 12px;
   font-weight: 500;
@@ -162,12 +161,10 @@ label {
 }
 
 .main .main-form input {
-  outline: 0;
   appearance: unset !important;
   width: 100%;
   display: block;
-  border: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 2px solid #999;
   padding: 0px 30px;
   font-family: Poppins;
   box-sizing: border-box;
@@ -185,7 +182,6 @@ label {
   color: #999;
 }
 .main .main-form input:focus {
-  outline: 0;
   box-shadow: none !important;
   border-bottom: 1px solid #222;
 }

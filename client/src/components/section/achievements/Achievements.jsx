@@ -15,7 +15,9 @@ export default function Achievements(props) {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/achievement/retrieveAll/${props.email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/achievement/retrieveAll/${props.email}`
+      )
       .then((res) => {
         setAchievements(res.data);
         setIsLoading(false);

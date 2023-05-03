@@ -42,16 +42,15 @@
   padding-bottom: 0px;
 }
 
-#introduction .blocked input, #introduction .blocked textarea {
+#introduction .blocked input,
+#introduction .blocked textarea {
   pointer-events: none;
-
 }
 
 #introduction input,
 #introduction textarea,
 #introduction input:focus,
 #introduction textarea:focus {
-  outline: none;
   border: 0px;
   color: inherit;
   background: inherit;

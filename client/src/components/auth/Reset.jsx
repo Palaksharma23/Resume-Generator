@@ -47,7 +47,7 @@ export default function Reset() {
       User.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
     ) {
       axios
-        .post("http://localhost:5000/auth/sendotp", User)
+        .post("https://resumegeneratorapp.onrender.com/auth/sendotp", User)
         .then((res) => {
           setAlert(res.data.message);
           if (res.data.success) {
@@ -77,7 +77,10 @@ export default function Reset() {
     e.preventDefault();
     if (User.newpassword && User.newpassword.length >= 6) {
       axios
-        .post("http://localhost:5000/auth/changepassword", User)
+        .post(
+          "https://resumegeneratorapp.onrender.com/auth/changepassword",
+          User
+        )
         .then((res) => {
           setAlert(res.data.message);
           if (res.data.success) {

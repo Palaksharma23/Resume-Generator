@@ -33,7 +33,6 @@
 #achievements textarea,
 #achievements input:focus,
 #achievements textarea:focus {
-  outline: none;
   border: 0px;
   color: inherit;
   background: inherit;
@@ -62,8 +61,7 @@
   width: 30px;
 }
 
-#achievements .achievement-form textarea[name="title"] ,#achievements .achievement-form h5{
+#achievements .achievement-form textarea[name="title"],
+#achievements .achievement-form h5 {
   width: 100%;
 }
-
-

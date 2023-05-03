@@ -42,7 +42,6 @@
 #certificates textarea,
 #certificates input:focus,
 #certificates textarea:focus {
-  outline: none;
   border: 0px;
   color: inherit;
   background: inherit;

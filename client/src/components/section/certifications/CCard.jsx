@@ -8,7 +8,9 @@ export default function CCard({ Certificate }) {
 
   const deleteCertificate = () => {
     axios
-      .delete(`http://localhost:5000/certificate/delete/${Certificate._id}`)
+      .delete(
+        `https://resumegeneratorapp.onrender.com/certificate/delete/${Certificate._id}`
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

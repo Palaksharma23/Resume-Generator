@@ -7,7 +7,9 @@ export default function EXCard({ Experience }) {
   const navigate = useNavigate();
   const deleteExperience = () => {
     axios
-      .delete(`http://localhost:5000/experience/delete/${Experience._id}`)
+      .delete(
+        `https://resumegeneratorapp.onrender.com/experience/delete/${Experience._id}`
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

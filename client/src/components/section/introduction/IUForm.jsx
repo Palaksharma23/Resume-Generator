@@ -9,7 +9,9 @@ export default function ICard(props) {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/introduction/retrieve/${props.email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/introduction/retrieve/${props.email}`
+      )
       .then((res) => {
         setIntro(res.data);
         if (res.data.name === undefined) {
@@ -28,7 +30,10 @@ export default function ICard(props) {
 
   const updateSkills = () => {
     axios
-      .put(`http://localhost:5000/introduction/update/${Intro._id}`, Intro)
+      .put(
+        `https://resumegeneratorapp.onrender.com/introduction/update/${Intro._id}`,
+        Intro
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

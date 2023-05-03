@@ -31,7 +31,7 @@ export default function CForm(props) {
       Cdata.issued_on !== ""
     ) {
       axios
-        .post("http://localhost:5000/certificate/add", Cdata)
+        .post("https://resumegeneratorapp.onrender.com/certificate/add", Cdata)
         .then((res) => {
           Toast.fire({
             icon: "success",

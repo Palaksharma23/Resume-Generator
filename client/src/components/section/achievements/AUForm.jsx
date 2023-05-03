@@ -10,7 +10,9 @@ export default function AUForm() {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/achievement/retrieveOne/${hash}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/achievement/retrieveOne/${hash}`
+      )
       .then((res) => {
         setAdata(res.data);
       })
@@ -26,7 +28,10 @@ export default function AUForm() {
 
   const updateAchievement = () => {
     axios
-      .put(`http://localhost:5000/achievement/update/${hash}`, Adata)
+      .put(
+        `https://resumegeneratorapp.onrender.com/achievement/update/${hash}`,
+        Adata
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

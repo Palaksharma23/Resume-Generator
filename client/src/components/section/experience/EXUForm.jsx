@@ -10,7 +10,9 @@ export default function EUForm() {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/experience/retrieveOne/${hash}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/experience/retrieveOne/${hash}`
+      )
       .then((res) => {
         setEXdata(res.data);
       })
@@ -26,7 +28,10 @@ export default function EUForm() {
 
   const updateExperience = () => {
     axios
-      .put(`http://localhost:5000/experience/update/${hash}`, EXdata)
+      .put(
+        `https://resumegeneratorapp.onrender.com/experience/update/${hash}`,
+        EXdata
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

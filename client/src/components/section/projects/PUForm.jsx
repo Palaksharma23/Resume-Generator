@@ -12,7 +12,9 @@ export default function PUForm() {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/project/retrieveOne/${hash}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/project/retrieveOne/${hash}`
+      )
       .then((res) => {
         setPdata(res.data);
       })
@@ -31,7 +33,10 @@ export default function PUForm() {
 
   const updateProject = () => {
     axios
-      .put(`http://localhost:5000/project/update/${hash}`, Pdata)
+      .put(
+        `https://resumegeneratorapp.onrender.com/project/update/${hash}`,
+        Pdata
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

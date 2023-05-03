@@ -28,7 +28,7 @@ export default function PForm(props) {
 
   const addProject = () => {
     axios
-      .post("http://localhost:5000/project/add", Pdata)
+      .post("https://resumegeneratorapp.onrender.com/project/add", Pdata)
       .then((res) => {
         Toast.fire({
           icon: "success",
