@@ -11,7 +11,9 @@ export default function CUForm() {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/certificate/retrieveOne/${hash}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/certificate/retrieveOne/${hash}`
+      )
       .then((res) => {
         setCdata(res.data);
       })
@@ -30,7 +32,10 @@ export default function CUForm() {
 
   const updateCertificate = () => {
     axios
-      .put(`http://localhost:5000/certificate/update/${hash}`, Cdata)
+      .put(
+        `https://resumegeneratorapp.onrender.com/certificate/update/${hash}`,
+        Cdata
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

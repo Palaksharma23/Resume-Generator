@@ -15,7 +15,9 @@ export default function Certificates(props) {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/certificate/retrieveAll/${props.email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/certificate/retrieveAll/${props.email}`
+      )
       .then((res) => {
         setCertificates(res.data);
         setIsLoading(false);

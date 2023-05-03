@@ -58,7 +58,6 @@
 #projects .project-form textarea,
 #projects .project-form input:focus,
 #projects .project-form textarea:focus {
-  outline: none;
   border: 0px;
   color: inherit;
   background: inherit;

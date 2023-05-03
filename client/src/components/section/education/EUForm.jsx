@@ -9,7 +9,9 @@ export default function EUForm() {
   const [Edata, setEdata] = React.useState({});
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/education/retrieveOne/${hash}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/education/retrieveOne/${hash}`
+      )
       .then((res) => {
         setEdata(res.data);
       })
@@ -25,7 +27,10 @@ export default function EUForm() {
 
   const updateProject = () => {
     axios
-      .put(`http://localhost:5000/education/update/${hash}`, Edata)
+      .put(
+        `https://resumegeneratorapp.onrender.com/education/update/${hash}`,
+        Edata
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

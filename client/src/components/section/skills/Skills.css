@@ -17,15 +17,14 @@
   padding-left: 20px;
 }
 
-#skills .box-info-body h6{
+#skills .box-info-body h6 {
   font-weight: 400;
   color: var(--dark);
   text-align: center;
-  
 }
 
-#skills textarea, textarea:focus{
-  outline: none;
+#skills textarea,
+textarea:focus {
   border: 0px;
   color: var(--dark);
   background: inherit;
@@ -34,6 +33,6 @@
   width: 100%;
 }
 
-#skills .box-info-footer button{
-    float: right;
+#skills .box-info-footer button {
+  float: right;
 }

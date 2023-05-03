@@ -13,7 +13,7 @@ export default function SUForm(props) {
       .then((res) => {
         setSkill(res.data);
         if (res.data.technical === undefined) {
-          navigate("http://localhost:5000/skills/addSkills");
+          navigate("https://resumegeneratorapp.onrender.com/skills/addSkills");
         }
       })
       .catch((err) => {
@@ -27,7 +27,10 @@ export default function SUForm(props) {
 
   const updateSkills = () => {
     axios
-      .put(`http://localhost:5000/skill/update/${skill._id}`, skill)
+      .put(
+        `https://resumegeneratorapp.onrender.com/skill/update/${skill._id}`,
+        skill
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

@@ -10,7 +10,9 @@ export default function Home(props) {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/dashboard/${props.email}/get`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/dashboard/${props.email}/get`
+      )
       .then((res) => {
         setDashboard(res.data);
       })

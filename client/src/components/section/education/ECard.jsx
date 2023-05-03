@@ -7,7 +7,9 @@ export default function ECard({ Education }) {
   const navigate = useNavigate();
   const deleteEducation = () => {
     axios
-      .delete(`http://localhost:5000/education/delete/${Education._id}`)
+      .delete(
+        `https://resumegeneratorapp.onrender.com/education/delete/${Education._id}`
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

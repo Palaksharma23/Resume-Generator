@@ -49,7 +49,9 @@ export default function Register() {
       }
     } else if (name === "userName") {
       axios
-        .get(`http://localhost:5000/auth/validateUserName/${value}`)
+        .get(
+          `https://resumegeneratorapp.onrender.com/auth/validateUserName/${value}`
+        )
         .then((res) => {
           if (
             res.data.message !== "Username Already Exists" &&
@@ -79,7 +81,10 @@ export default function Register() {
             if (User.password.length >= 6) {
               if (User.password === User.confirmPassword) {
                 axios
-                  .post("http://localhost:5000/auth/sendVotp", User)
+                  .post(
+                    "https://resumegeneratorapp.onrender.com/auth/sendVotp",
+                    User
+                  )
                   .then((res) => {
                     setAlert(res.data.message);
                     if (res.data.success) {
@@ -128,7 +133,7 @@ export default function Register() {
 
   function Register() {
     axios
-      .post("http://localhost:5000/auth/register", User)
+      .post("https://resumegeneratorapp.onrender.com/auth/register", User)
       .then((res) => {
         setAlert(res.data.message);
         if (res.data.success) {

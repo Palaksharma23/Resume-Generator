@@ -22,7 +22,7 @@ export default function EXForm(props) {
 
   const addExperience = () => {
     axios
-      .post("http://localhost:5000/experience/add", EXdata)
+      .post("https://resumegeneratorapp.onrender.com/experience/add", EXdata)
       .then((res) => {
         Toast.fire({
           icon: "success",

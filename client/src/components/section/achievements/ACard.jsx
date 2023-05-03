@@ -7,7 +7,9 @@ export default function ACard({ Achievement }) {
   const navigate = useNavigate();
   const deleteAchievement = () => {
     axios
-      .delete(`http://localhost:5000/achievement/delete/${Achievement._id}`)
+      .delete(
+        `https://resumegeneratorapp.onrender.com/achievement/delete/${Achievement._id}`
+      )
       .then((res) => {
         Toast.fire({
           icon: "success",

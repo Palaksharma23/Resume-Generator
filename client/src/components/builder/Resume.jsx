@@ -18,35 +18,49 @@ export default function Resume(props) {
   React.useEffect(() => {
     setEmail(props.email);
     axios
-      .get(`http://localhost:5000/introduction/retrieve/${email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/introduction/retrieve/${email}`
+      )
       .then((res) => {
         setIntro(res.data);
       });
     axios
-      .get(`http://localhost:5000/education/retrieveAll/${email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/education/retrieveAll/${email}`
+      )
       .then((res) => {
         setEducation(res.data);
       });
     axios
-      .get(`http://localhost:5000/project/retrieveAll/${email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/project/retrieveAll/${email}`
+      )
       .then((res) => {
         setProjects(res.data);
       });
     axios
-      .get(`http://localhost:5000/certificate/retrieveAll/${email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/certificate/retrieveAll/${email}`
+      )
       .then((res) => {
         setCertificates(res.data);
       });
     axios
-      .get(`http://localhost:5000/achievement/retrieveAll/${email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/achievement/retrieveAll/${email}`
+      )
       .then((res) => {
         setAchievements(res.data);
       });
-    axios.get(`http://localhost:5000/skill/retrieve/${email}`).then((res) => {
-      setskills(res.data);
-    });
     axios
-      .get(`http://localhost:5000/experience/retrieveAll/${email}`)
+      .get(`https://resumegeneratorapp.onrender.com/skill/retrieve/${email}`)
+      .then((res) => {
+        setskills(res.data);
+      });
+    axios
+      .get(
+        `https://resumegeneratorapp.onrender.com/experience/retrieveAll/${email}`
+      )
       .then((res) => {
         setExperience(res.data);
       });

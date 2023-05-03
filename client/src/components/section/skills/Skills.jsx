@@ -12,7 +12,9 @@ export default function Skills(props) {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/skill/retrieve/${props.email}`)
+      .get(
+        `https://resumegeneratorapp.onrender.com/skill/retrieve/${props.email}`
+      )
       .then((res) => {
         setskills(res.data);
         if (res.data.technical === undefined) {
